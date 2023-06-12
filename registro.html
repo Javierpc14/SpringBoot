@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<main>
+    <form id="registro">
+
+        <!-- Apartado del nombre -->
+        <label>Nombre</label><br>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre"><br>
+
+
+        <!-- Apartado de la contraseña -->
+        <label>Contraseña</label><br>
+        <input type="password" name="contrasena" id="password" placeholder="Contraseña"><br>
+
+
+        <!-- Apartado de la confirmacion de la contraseña -->
+        <label>Confirmar contraseña</label><br>
+        <input type="password" name="password2" id="passwordConfirm" placeholder="Confirmar contraseña"><br>
+
+        <!-- Boton de enviar los datos -->
+        <button type="submit" id="enviar" onclick="llamar()" disabled>Enviar</button>
+        <br>
+        <br>
+        <!-- Icono de flecha para atras -->
+        <div class="enlace">
+            <a href="index.html"><i class="far fa-hand-point-left"></i></a>
+        </div>
+
+    </form>
+</main>
+</body>
+<script src="js/registro.js"></script>
+</html>

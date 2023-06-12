@@ -1,0 +1,60 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.delete{
+    background-color: #e71d32;
+    color: white;
+    /*padding: 6px 10px;*/
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete:hover {
+    background-color: #9b1924;
+}
+
+.update{
+    background-color: #189bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.update:hover {
+    background-color: #1265a2;
+}
+
+.insert{
+     background-color: #f8cf2b;
+     color: white;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+}
+.insert:hover {
+    background-color: #b9991d;
+}
+
+.inserttd{
+    text-align: center;
+}
+
+a{
+    color: #000000;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    font-family: "Book Antiqua";
+}
+

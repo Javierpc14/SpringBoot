@@ -1,0 +1,74 @@
+/* Edicion de la imagen de fondo */
+body {
+    background: linear-gradient(to bottom, #f0d975, #e3c643, #debd3a);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Edicion de la caja exterior que contiene todo */
+form {
+    width: 23vw;
+    padding: 16px;
+    margin-top: 10vh;
+    margin-left: 36vw;
+    background: linear-gradient(to bottom, #f0d975, #e3c643, #debd3a, #d7b432);
+}
+
+/* Edición del texto que aparece */
+form label {
+    width: 72px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+
+/* Edicion del boton de enviar datos */
+form input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    display: block;
+    color: #fff;
+    background: linear-gradient(to bottom, #ffa500, #ffcc00);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Edicion del campo nota */
+form input[type="number"],
+form input[type="text"] {
+    width: 20.3vw;
+    padding: 5px 15px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin: 15px 0;
+    display: inline-block;
+}
+
+/* Edicion del boton de retroceso */
+.far {
+    color: #fff;
+    font-size: 30px;
+}
+
+/* Estilo para el botón */
+#enviar {
+    background-color: #f0d975;
+    color: #fff;
+    border: none;
+    padding: 2%;
+    width: 50%;
+    margin-top: 2vh;
+}
+
+#enviar:hover {
+    background-color: #e3c643;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#enviar:active {
+    background-color: #debd3a;
+    transform: scale(0.95);
+    box-shadow: none;
+}

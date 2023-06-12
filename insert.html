@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>insertar nuevo alumno</title>
+    <link rel="stylesheet" href="css/insert.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+<body>
+<form id="insertar-alumno">
+  <label>Nombre</label><br>
+  <input type="text" name="nombre" id="nombre-insertar" placeholder="Nombre" required><br>
+
+  <label>Nota</label><br>
+  <input type="number" name="nota" id="nota-insertar" placeholder="Nota" required><br>
+
+  <button type="submit" id="enviar-insertar">Añadir Alumno</button>
+  <br>
+  <div class="enlace">
+    <i class="far fa-hand-point-left" onclick="history.back()"></i>
+  </div>
+</form>
+</body>
+<script>
+  document.getElementById('insertar-alumno').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const nombre = document.getElementById('nombre-insertar').value;
+    const nota = parseFloat(document.getElementById('nota-insertar').value);
+
+    const nuevoAlumno = {
+      nombre: nombre,
+      nota: nota
+    };
+
+    fetch('/añadirAlumno', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(nuevoAlumno)
+    })
+            .then(function(response) {
+              if (response.ok) {
+                console.log('Alumno insertado correctamente');
+                window.location.href = 'alumno.html';
+              } else {
+                console.error('Error al insertar el alumno');
+              }
+            })
+            .catch(function(error) {
+              console.error('Error de red:', error);
+            });
+  });
+</script>
+</html>
